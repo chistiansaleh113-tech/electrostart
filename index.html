@@ -1,0 +1,1472 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ÉLECTROSTART | Académie d'Électronique</title><style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef3f8;
+    color:#172033;
+    line-height:1.7;
+}
+
+header{
+    background:linear-gradient(135deg,#07152f,#123c8c,#2563eb);
+    color:white;
+    text-align:center;
+    padding:65px 20px;
+}
+
+.logo{
+    font-size:46px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+header p{
+    font-size:20px;
+    margin-top:10px;
+}
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#07111f;
+    padding:12px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+}
+
+nav button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:11px 15px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+nav button:hover{
+    background:#1d4ed8;
+}
+
+main{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:30px 18px;
+}
+
+section{
+    background:white;
+    margin-bottom:30px;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 6px 22px rgba(0,0,0,.08);
+}
+
+section h2{
+    color:#102a63;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+section h3{
+    color:#173d8f;
+}
+
+.hero{
+    text-align:center;
+    padding:50px 25px;
+}
+
+.hero h1{
+    color:#102a63;
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+}
+
+.hero-svg{
+    width:100%;
+    max-width:1000px;
+    margin:30px auto;
+    display:block;
+    border-radius:18px;
+    background:#07111f;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:18px;
+    margin-top:30px;
+}
+
+.stat{
+    background:#eff6ff;
+    border:1px solid #bfdbfe;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    color:#2563eb;
+    font-size:35px;
+}
+
+.menu-cours{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.menu-cours a{
+    text-decoration:none;
+    background:#f1f5f9;
+    color:#172554;
+    border:1px solid #dbeafe;
+    padding:18px;
+    border-radius:12px;
+    font-weight:bold;
+}
+
+.menu-cours a:hover{
+    background:#dbeafe;
+}
+
+.lesson{
+    background:#f8fafc;
+    border-left:6px solid #2563eb;
+    padding:25px;
+    margin:20px 0;
+    border-radius:12px;
+}
+
+.lesson h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.formula{
+    background:#0f172a;
+    color:white;
+    padding:18px;
+    text-align:center;
+    border-radius:10px;
+    margin:18px 0;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.note{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:15px;
+    margin-top:15px;
+    border-radius:8px;
+}
+
+.info{
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    margin-top:15px;
+    border-radius:8px;
+}
+
+.component-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+
+.component{
+    background:#fff;
+    border:1px solid #dbe3ef;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.2s;
+}
+
+.component:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.component-picture{
+    height:190px;
+    background:#f8fafc;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.component-picture svg{
+    width:100%;
+    height:100%;
+}
+
+.component-text{
+    padding:20px;
+}
+
+.component-text h3{
+    font-size:21px;
+    margin-bottom:8px;
+}
+
+.timeline{
+    position:relative;
+    max-width:1000px;
+    margin:auto;
+}
+
+.timeline:before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:#2563eb;
+}
+
+.event{
+    position:relative;
+    margin:25px 0 25px 55px;
+    background:#f8fafc;
+    border-radius:12px;
+    padding:20px;
+    border:1px solid #dbeafe;
+}
+
+.event:before{
+    content:"";
+    position:absolute;
+    left:-44px;
+    top:25px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#2563eb;
+    border:4px solid white;
+    box-shadow:0 0 0 2px #2563eb;
+}
+
+.year{
+    color:#2563eb;
+    font-weight:bold;
+    font-size:23px;
+}
+
+.tools{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
+}
+
+.tool{
+    background:#f8fafc;
+    border:1px solid #dbe3ef;
+    border-radius:12px;
+    padding:20px;
+}
+
+.tool h3{
+    margin-bottom:8px;
+}
+
+.warning{
+    background:#fef2f2;
+    border-left:6px solid #dc2626;
+    padding:20px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.safe{
+    background:#ecfdf5;
+    border-left:6px solid #16a34a;
+    padding:20px;
+    border-radius:10px;
+    margin:15px 0;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.step{
+    background:#f8fafc;
+    border:1px solid #dbe3ef;
+    padding:20px;
+    border-radius:12px;
+}
+
+.step span{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    border-radius:50%;
+    width:35px;
+    height:35px;
+    text-align:center;
+    line-height:35px;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.measure-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+}
+
+.measure{
+    background:#f8fafc;
+    padding:20px;
+    border:1px solid #dbe3ef;
+    border-radius:12px;
+}
+
+.multimeter-svg{
+    width:100%;
+    max-width:650px;
+    display:block;
+    margin:25px auto;
+}
+
+.level{
+    color:white;
+    padding:17px;
+    border-radius:10px;
+    margin:35px 0 18px;
+}
+
+.beginner{
+    background:#16a34a;
+}
+
+.intermediate{
+    background:#ea580c;
+}
+
+.advanced{
+    background:#dc2626;
+}
+
+.exercise{
+    background:#f8fafc;
+    border:1px solid #dbe3ef;
+    padding:22px;
+    border-radius:13px;
+    margin:15px 0;
+}
+
+.exercise h3{
+    margin-bottom:8px;
+}
+
+.answer{
+    display:none;
+    background:#ecfdf5;
+    border-left:5px solid #16a34a;
+    padding:15px;
+    margin-top:12px;
+    border-radius:8px;
+}
+
+.answer.show{
+    display:block;
+}
+
+.solution{
+    background:#16a34a;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:10px 15px;
+    cursor:pointer;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+footer{
+    background:#07111f;
+    color:white;
+    text-align:center;
+    padding:45px 20px;
+}
+
+footer .footer-logo{
+    font-size:30px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+footer strong{
+    color:#60a5fa;
+    font-size:21px;
+}
+
+.top{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    font-size:23px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:45px 15px;
+    }
+
+    .logo{
+        font-size:34px;
+    }
+
+    header p{
+        font-size:16px;
+    }
+
+    nav button{
+        font-size:12px;
+        padding:9px 10px;
+    }
+
+    main{
+        padding:15px 8px;
+    }
+
+    section{
+        padding:22px 14px;
+    }
+
+    section h2{
+        font-size:25px;
+    }
+
+    .hero h1{
+        font-size:29px;
+    }
+
+    .hero{
+        padding:30px 12px;
+    }
+
+    .component-grid{
+        grid-template-columns:1fr;
+    }
+
+    .component-picture{
+        height:210px;
+    }
+
+    .event{
+        margin-left:45px;
+    }
+}
+</style></head><body><header id="accueil"><div class="logo">
+⚡ ÉLECTROSTART
+</div><p>
+Académie d'électronique — Comprendre • Mesurer • Concevoir
+</p></header><nav><button onclick="go('accueil')">🏠 Accueil</button>
+<button onclick="go('cours')">📚 Cours</button>
+<button onclick="go('histoire')">📜 Histoire</button>
+<button onclick="go('composants')">🔧 Composants</button>
+<button onclick="go('soudure')">🔥 Soudure</button>
+<button onclick="go('multimetre')">📏 Multimètre</button>
+<button onclick="go('exercices')">📝 Exercices</button>
+<button onclick="go('apropos')">⭐ À propos</button>
+
+</nav><main><section class="hero"><h1>Bienvenue sur ÉLECTROSTART ⭐</h1><p>
+ÉLECTROSTART est une plateforme d'apprentissage destinée à
+faire découvrir l'électronique depuis les bases jusqu'aux
+notions plus avancées.
+</p><svg class="hero-svg"
+viewBox="0 0 1000 360"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect width="1000" height="360" fill="#07111f"/><text x="500" y="70"
+text-anchor="middle"
+fill="white"
+font-size="42"
+font-weight="bold">
+ÉLECTROSTART
+</text>
+
+<text x="500" y="105"
+text-anchor="middle"
+fill="#93c5fd"
+font-size="20">
+ACADÉMIE D'ÉLECTRONIQUE
+</text>
+
+<line x1="70" y1="200" x2="220" y2="200"
+stroke="#60a5fa" stroke-width="6"/>
+
+<polyline
+points="220,200 240,165 260,235 280,165 300,235 320,200"
+fill="none"
+stroke="#60a5fa"
+stroke-width="6"/>
+
+<line x1="320" y1="200" x2="430" y2="200"
+stroke="#60a5fa" stroke-width="6"/>
+
+<circle cx="500" cy="200"
+r="55"
+fill="#1e3a8a"
+stroke="#60a5fa"
+stroke-width="6"/>
+
+<text x="500" y="211"
+text-anchor="middle"
+fill="white"
+font-size="28"
+font-weight="bold">
+LED
+</text>
+
+<line x1="555" y1="200" x2="680" y2="200"
+stroke="#60a5fa" stroke-width="6"/>
+
+<rect x="680" y="165"
+width="110"
+height="70"
+rx="8"
+fill="#1e293b"
+stroke="#60a5fa"
+stroke-width="5"/>
+
+<text x="735" y="209"
+text-anchor="middle"
+fill="white"
+font-size="25">
+IC
+</text>
+
+<line x1="790" y1="200" x2="930" y2="200"
+stroke="#60a5fa" stroke-width="6"/>
+
+<circle cx="70" cy="200" r="8"
+fill="#60a5fa"/>
+
+<circle cx="930" cy="200" r="8"
+fill="#60a5fa"/>
+
+<text x="500" y="300"
+text-anchor="middle"
+fill="#cbd5e1"
+font-size="20">
+Électricité → Composants → Circuits → Mesures → Technologie
+</text>
+
+</svg><div class="stats"><div class="stat">
+<strong>30+</strong>
+Composants
+</div><div class="stat">
+<strong>45</strong>
+Exercices
+</div><div class="stat">
+<strong>8</strong>
+Modules
+</div><div class="stat">
+<strong>2025</strong>
+Histoire
+</div></div></section><section><h2>📚 Parcours d'apprentissage</h2><div class="menu-cours"><a href="#cours">1️⃣ Bases de l'électronique</a>
+<a href="#histoire">2️⃣ Histoire de l'électronique</a>
+<a href="#composants">3️⃣ Composants électroniques</a>
+<a href="#soudure">4️⃣ Soudure et sécurité</a>
+<a href="#multimetre">5️⃣ Multimètre et mesures</a>
+<a href="#circuits">6️⃣ Circuits électriques</a>
+<a href="#exercices">7️⃣ Exercices</a>
+<a href="#apropos">8️⃣ À propos</a>
+
+</div></section><section id="cours"><h2>📚 Cours fondamentaux</h2><div class="lesson"><h3>⚡ 1. Qu'est-ce que l'électronique ?</h3><p>
+L'électronique est le domaine qui étudie et utilise le comportement
+des charges électriques dans des composants et des circuits afin
+de traiter, commander, transmettre ou convertir des signaux et
+de l'énergie.
+</p><div class="info">
+<b>À retenir :</b> l'électronique est présente dans les téléphones,
+ordinateurs, téléviseurs, véhicules, équipements médicaux,
+systèmes industriels et nombreux appareils du quotidien.
+</div></div><div class="lesson"><h3>🔋 2. Tension électrique</h3><p>
+La tension représente une différence de potentiel entre deux points.
+Elle se mesure en volts (V).
+</p><div class="formula">
+U = R × I
+</div></div><div class="lesson"><h3>🔌 3. Courant électrique</h3><p>
+Le courant représente le débit de charges électriques.
+Son unité est l'ampère (A).
+</p><div class="formula">
+I = U / R
+</div></div><div class="lesson"><h3>🟫 4. Résistance</h3><p>
+Une résistance s'oppose au passage du courant.
+Son unité est l'ohm (Ω).
+</p><div class="formula">
+R = U / I
+</div></div><div class="lesson"><h3>🔥 5. Puissance électrique</h3><p>
+La puissance électrique indique le rythme auquel l'énergie
+électrique est transférée.
+</p><div class="formula">
+P = U × I
+</div></div><div class="lesson"><h3>🌀 6. Condensateur</h3><p>
+Un condensateur peut accumuler une charge électrique.
+Sa capacité est exprimée en farads.
+</p><div class="formula">
+Q = C × U
+</div></div><div class="lesson"><h3>🧲 7. Bobine</h3><p>
+Une bobine stocke de l'énergie dans un champ magnétique.
+Son unité est le henry (H).
+</p></div><div class="lesson"><h3>💡 8. Diode et LED</h3><p>
+Une diode est un composant semi-conducteur qui permet
+principalement au courant de circuler dans un sens.
+Une LED est une diode électroluminescente.
+</p></div><div class="lesson"><h3>🔲 9. Transistor</h3><p>
+Le transistor est un composant semi-conducteur fondamental.
+Il peut notamment servir à l'amplification et à la commutation.
+</p></div><div class="lesson"><h3>🧠 10. Circuit intégré</h3><p>
+Un circuit intégré rassemble un grand nombre de fonctions et
+de composants sur un petit morceau de semi-conducteur.
+</p></div></section><section id="histoire"><h2>📜 Histoire de l'électronique — jusqu'en 2025</h2><p>
+Des premiers tubes électroniques aux circuits intégrés modernes,
+l'électronique a connu une évolution spectaculaire.
+</p><div class="timeline"><div class="event">
+<div class="year">1896–1900</div>
+<h3>Les débuts</h3>
+<p>
+Les recherches sur les rayons cathodiques, les tubes et les
+communications sans fil préparent l'électronique moderne.
+</p>
+</div><div class="event">
+<div class="year">1904</div>
+<h3>La diode à vide</h3>
+<p>
+John Ambrose Fleming développe une diode à vide à deux électrodes.
+</p>
+</div><div class="event">
+<div class="year">1906</div>
+<h3>Le triode</h3>
+<p>
+Lee de Forest ajoute une troisième électrode et permet
+l'amplification des signaux.
+</p>
+</div><div class="event">
+<div class="year">1920–1940</div>
+<h3>L'ère de la radio</h3>
+<p>
+Les tubes électroniques deviennent importants dans les radios,
+amplificateurs et télécommunications.
+</p>
+</div><div class="event">
+<div class="year">1947</div>
+<h3>Le transistor</h3>
+<p>
+Le transistor à contact ponctuel est réalisé aux Bell Labs
+par John Bardeen et Walter Brattain.
+</p>
+</div><div class="event">
+<div class="year">1958</div>
+<h3>Le circuit intégré</h3>
+<p>
+Jack Kilby démontre un circuit électronique intégré sur
+un même matériau semi-conducteur.
+</p>
+</div><div class="event">
+<div class="year">1960</div>
+<h3>La technologie MOS</h3>
+<p>
+Les technologies MOS permettent une forte miniaturisation
+des circuits intégrés.
+</p>
+</div><div class="event">
+<div class="year">1971</div>
+<h3>Le microprocesseur</h3>
+<p>
+L'intégration du processeur sur une seule puce accélère
+l'évolution de l'informatique.
+</p>
+</div><div class="event">
+<div class="year">1970–1980</div>
+<h3>Microprocesseurs et microcontrôleurs</h3>
+<p>
+Les circuits intégrés deviennent plus puissants et sont
+utilisés dans de nombreux systèmes électroniques.
+</p>
+</div><div class="event">
+<div class="year">1980–1990</div>
+<h3>Ordinateurs personnels</h3>
+<p>
+Les microprocesseurs participent à la démocratisation
+de l'informatique personnelle.
+</p>
+</div><div class="event">
+<div class="year">1990–2000</div>
+<h3>Internet et numérique</h3>
+<p>
+Les circuits électroniques deviennent essentiels aux réseaux,
+ordinateurs et télécommunications numériques.
+</p>
+</div><div class="event">
+<div class="year">2000–2010</div>
+<h3>Smartphones</h3>
+<p>
+La miniaturisation permet d'intégrer processeurs, mémoire,
+capteurs et communications dans des appareils mobiles.
+</p>
+</div><div class="event">
+<div class="year">2010–2020</div>
+<h3>Objets connectés</h3>
+<p>
+Les capteurs, systèmes embarqués et objets connectés
+se développent rapidement.
+</p>
+</div><div class="event">
+<div class="year">2020–2025</div>
+<h3>Électronique intelligente</h3>
+<p>
+L'électronique joue un rôle majeur dans l'intelligence artificielle,
+la robotique, les véhicules électriques, les télécommunications
+et les équipements médicaux.
+</p>
+</div><div class="event">
+<div class="year">2025</div>
+<h3>Électronique moderne</h3>
+<p>
+En 2025, les semi-conducteurs et circuits intégrés sont au cœur
+de l'informatique, des smartphones, des centres de données,
+des automobiles et de nombreux appareils modernes.
+</p>
+</div></div></section><section id="composants"><h2>🔧 Bibliothèque des composants électroniques</h2><div class="component-grid"><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<line x1="20" y1="80" x2="75" y2="80"
+stroke="#111" stroke-width="5"/>
+<polyline points="75,80 95,45 115,115 135,45 155,115 175,45 195,80"
+fill="none" stroke="#111" stroke-width="6"/>
+<line x1="195" y1="80" x2="280" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Résistance</h3>
+<p>Limite le courant.</p>
+<p>Unité : Ω</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<rect x="80" y="55" width="140" height="50"
+fill="#cbd5e1" stroke="#111" stroke-width="5"/>
+<line x1="20" y1="80" x2="80" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="220" y1="80" x2="280" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="150" y1="20" x2="150" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Potentiomètre</h3>
+<p>Résistance variable.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<line x1="20" y1="80" x2="125" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="125" y1="35" x2="125" y2="125"
+stroke="#111" stroke-width="7"/>
+<line x1="175" y1="35" x2="175" y2="125"
+stroke="#111" stroke-width="7"/>
+<line x1="175" y1="80" x2="280" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Condensateur</h3>
+<p>Stocke une charge électrique.</p>
+<p>Unité : F</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<path d="M70 80 C70 35 105 35 105 80 C105 125 140 125 140 80 C140 35 175 35 175 80 C175 125 210 125 210 80"
+fill="none" stroke="#111" stroke-width="6"/>
+<line x1="20" y1="80" x2="70" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="210" y1="80" x2="280" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Bobine</h3>
+<p>Stocke de l'énergie magnétique.</p>
+<p>Unité : H</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<polygon points="110,40 110,120 180,80"
+fill="#93c5fd" stroke="#111" stroke-width="5"/>
+<line x1="180" y1="40" x2="180" y2="120"
+stroke="#111" stroke-width="7"/>
+<line x1="20" y1="80" x2="110" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="180" y1="80" x2="280" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Diode</h3>
+<p>Redressement et protection.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<polygon points="110,40 110,120 180,80"
+fill="#facc15" stroke="#111" stroke-width="5"/>
+<line x1="180" y1="40" x2="180" y2="120"
+stroke="#111" stroke-width="7"/>
+<line x1="20" y1="80" x2="110" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="180" y1="80" x2="280" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="140" y1="30" x2="115" y2="10"
+stroke="#111" stroke-width="4"/>
+<line x1="160" y1="30" x2="140" y2="8"
+stroke="#111" stroke-width="4"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>LED</h3>
+<p>Produit de la lumière.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<line x1="60" y1="80" x2="125" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="125" y1="35" x2="125" y2="125"
+stroke="#111" stroke-width="7"/>
+<line x1="125" y1="50" x2="210" y2="20"
+stroke="#111" stroke-width="5"/>
+<line x1="125" y1="110" x2="210" y2="140"
+stroke="#111" stroke-width="5"/>
+<line x1="210" y1="20" x2="270" y2="20"
+stroke="#111" stroke-width="5"/>
+<line x1="210" y1="140" x2="270" y2="140"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Transistor BJT</h3>
+<p>Amplification et commutation.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<rect x="90" y="25" width="120" height="110"
+rx="8" fill="#1e293b" stroke="#111" stroke-width="5"/>
+<text x="150" y="92"
+text-anchor="middle"
+fill="white" font-size="28">
+IC
+</text>
+<line x1="70" y1="45" x2="90" y2="45"
+stroke="#111" stroke-width="5"/>
+<line x1="70" y1="80" x2="90" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="70" y1="115" x2="90" y2="115"
+stroke="#111" stroke-width="5"/>
+<line x1="210" y1="45" x2="230" y2="45"
+stroke="#111" stroke-width="5"/>
+<line x1="210" y1="80" x2="230" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="210" y1="115" x2="230" y2="115"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Circuit intégré</h3>
+<p>Regroupe de nombreuses fonctions électroniques.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<rect x="80" y="35" width="140" height="90"
+fill="#dbeafe" stroke="#111" stroke-width="5"/>
+<circle cx="125" cy="80" r="25"
+fill="none" stroke="#111" stroke-width="5"/>
+<line x1="125" y1="55" x2="125" y2="105"
+stroke="#111" stroke-width="4"/>
+<line x1="20" y1="80" x2="80" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="220" y1="55" x2="280" y2="55"
+stroke="#111" stroke-width="5"/>
+<line x1="220" y1="105" x2="280" y2="105"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Relais</h3>
+<p>Interrupteur commandé électriquement.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<line x1="20" y1="80" x2="90" y2="80"
+stroke="#111" stroke-width="5"/>
+<rect x="90" y="55" width="120" height="50"
+rx="25" fill="#e5e7eb" stroke="#111" stroke-width="5"/>
+<line x1="115" y1="80" x2="185" y2="80"
+stroke="#dc2626" stroke-width="5"/>
+<line x1="210" y1="80" x2="280" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Fusible</h3>
+<p>Protection contre un courant excessif.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<line x1="20" y1="90" x2="100" y2="90"
+stroke="#111" stroke-width="5"/>
+<circle cx="105" cy="90" r="7"/>
+<circle cx="195" cy="90" r="7"/>
+<line x1="105" y1="90" x2="175" y2="45"
+stroke="#111" stroke-width="6"/>
+<line x1="195" y1="90" x2="280" y2="90"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Interrupteur</h3>
+<p>Ouvre ou ferme un circuit.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<circle cx="150" cy="80" r="55"
+fill="#dbeafe" stroke="#111" stroke-width="6"/>
+<text x="150" y="95"
+text-anchor="middle"
+font-size="45"
+font-weight="bold">
+M
+</text>
+<line x1="95" y1="80" x2="25" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="205" y1="80" x2="275" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Moteur</h3>
+<p>Convertit l'énergie électrique en mouvement.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<line x1="20" y1="80" x2="100" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="100" y1="40" x2="100" y2="120"
+stroke="#111" stroke-width="7"/>
+<line x1="130" y1="55" x2="130" y2="105"
+stroke="#111" stroke-width="7"/>
+<line x1="160" y1="40" x2="160" y2="120"
+stroke="#111" stroke-width="7"/>
+<line x1="190" y1="55" x2="190" y2="105"
+stroke="#111" stroke-width="7"/>
+<line x1="190" y1="80" x2="280" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Batterie</h3>
+<p>Source d'énergie électrique.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<rect x="100" y="50" width="100" height="60"
+fill="#f8fafc" stroke="#111" stroke-width="5"/>
+<polyline points="110,80 130,55 150,105 170,55 190,80"
+fill="none" stroke="#111" stroke-width="5"/>
+<line x1="50" y1="40" x2="95" y2="60"
+stroke="#111" stroke-width="4"/>
+<line x1="50" y1="80" x2="95" y2="80"
+stroke="#111" stroke-width="4"/>
+<line x1="50" y1="120" x2="95" y2="100"
+stroke="#111" stroke-width="4"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>LDR</h3>
+<p>Résistance sensible à la lumière.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<rect x="100" y="40" width="100" height="80"
+fill="#e2e8f0" stroke="#111" stroke-width="5"/>
+<text x="150" y="92"
+text-anchor="middle"
+font-size="25">
+XTAL
+</text>
+<line x1="100" y1="80" x2="50" y2="80"
+stroke="#111" stroke-width="5"/>
+<line x1="200" y1="80" x2="250" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Quartz</h3>
+<p>Produit une fréquence stable.</p>
+</div>
+</div><div class="component">
+<div class="component-picture">
+<svg viewBox="0 0 300 160">
+<polygon points="75,30 75,130 230,80"
+fill="#eff6ff" stroke="#111" stroke-width="5"/>
+<text x="95" y="70" font-size="28">−</text>
+<text x="95" y="110" font-size="28">+</text>
+<line x1="20" y1="60" x2="75" y2="60"
+stroke="#111" stroke-width="5"/>
+<line x1="20" y1="100" x2="75" y2="100"
+stroke="#111" stroke-width="5"/>
+<line x1="230" y1="80" x2="280" y2="80"
+stroke="#111" stroke-width="5"/>
+</svg>
+</div>
+<div class="component-text">
+<h3>Amplificateur opérationnel</h3>
+<p>Amplification et traitement de signaux.</p>
+</div>
+</div></div></section><section id="soudure"><h2>🔥 Fer à souder : cours et sécurité</h2><div class="warning"><h3>⚠️ Sécurité avant tout</h3><p>
+Un fer à souder devient très chaud et peut provoquer des brûlures
+ou un incendie. Les travaux pratiques doivent être réalisés dans
+un environnement adapté, avec ventilation et supervision d'une
+personne expérimentée.
+</p></div><h3>🧰 Matériel</h3><div class="tools"><div class="tool">
+<h3>🔥 Fer à souder</h3>
+<p>Outil chauffant utilisé pour réaliser des connexions soudées.</p>
+</div><div class="tool">
+<h3>🧲 Support</h3>
+<p>Permet de poser le fer chaud de manière stable.</p>
+</div><div class="tool">
+<h3>🧵 Fil de soudure</h3>
+<p>Métal d'apport utilisé pour réaliser une jonction.</p>
+</div><div class="tool">
+<h3>🧽 Nettoyage</h3>
+<p>Permet de garder la pointe propre.</p>
+</div><div class="tool">
+<h3>🌬️ Ventilation</h3>
+<p>Réduit l'exposition aux fumées.</p>
+</div><div class="tool">
+<h3>🥽 Protection</h3>
+<p>La protection des yeux est importante lors des travaux pratiques.</p>
+</div></div><div class="safe"><h3>✅ Règles essentielles</h3><ul>
+<li>Considérer la pointe comme extrêmement chaude.</li>
+<li>Ne jamais toucher la pointe.</li>
+<li>Utiliser un support adapté.</li>
+<li>Garder l'espace de travail dégagé.</li>
+<li>Éviter de respirer directement les fumées.</li>
+<li>Ne jamais travailler sur un circuit alimenté.</li>
+<li>Éteindre et débrancher l'appareil après utilisation.</li>
+<li>Se laver les mains après manipulation.</li>
+</ul></div><div class="steps"><div class="step">
+<span>1</span>
+<h3>Préparer</h3>
+<p>
+Identifier les composants et préparer un espace propre et sûr.
+</p>
+</div><div class="step">
+<span>2</span>
+<h3>Comprendre</h3>
+<p>
+Comprendre le rôle de la chaleur et du métal d'apport dans une soudure.
+</p>
+</div><div class="step">
+<span>3</span>
+<h3>Contrôler</h3>
+<p>
+Une connexion doit être inspectée avant toute mise sous tension.
+</p>
+</div><div class="step">
+<span>4</span>
+<h3>Ranger</h3>
+<p>
+Éteindre l'appareil et laisser le matériel refroidir dans un endroit sûr.
+</p>
+</div></div></section><section id="multimetre"><h2>📏 Apprendre à utiliser un multimètre</h2><p>
+Un multimètre peut permettre de mesurer la tension, la résistance,
+la continuité, le courant, les diodes, la capacité et parfois
+la fréquence, selon le modèle.
+</p><svg class="multimeter-svg"
+viewBox="0 0 700 400"
+xmlns="http://www.w3.org/2000/svg">
+
+<rect x="210" y="30"
+width="280" height="330"
+rx="30"
+fill="#facc15"
+stroke="#111"
+stroke-width="8"/>
+
+<rect x="245" y="65"
+width="210" height="80"
+rx="8"
+fill="#d1fae5"
+stroke="#111"
+stroke-width="5"/>
+
+<text x="350" y="118"
+text-anchor="middle"
+font-size="45">
+12.00
+</text>
+
+<circle cx="350" cy="225"
+r="65"
+fill="#e5e7eb"
+stroke="#111"
+stroke-width="6"/>
+
+<line x1="350" y1="225"
+x2="380" y2="180"
+stroke="#111"
+stroke-width="7"/>
+
+<circle cx="350" cy="225"
+r="10"
+fill="#111"/>
+
+<text x="350" y="315"
+text-anchor="middle"
+font-size="24"
+font-weight="bold">
+MULTIMÈTRE
+</text>
+
+<line x1="245" y1="350"
+x2="100" y2="380"
+stroke="#111"
+stroke-width="6"/>
+
+<line x1="455" y1="350"
+x2="600" y2="380"
+stroke="#dc2626"
+stroke-width="6"/>
+
+</svg><div class="warning"><h3>⚠️ Sécurité</h3><p>
+Pour apprendre, utiliser des circuits pédagogiques basse tension
+adaptés. Toujours vérifier la fonction sélectionnée, les bornes
+des cordons et les limites du multimètre.
+</p></div><div class="measure-grid"><div class="measure">
+<h3>Ω Résistance</h3>
+<p>
+La résistance se mesure sur un circuit hors tension.
+</p>
+<div class="formula">
+R = U / I
+</div>
+</div><div class="measure">
+<h3>🔔 Continuité</h3>
+<p>
+Permet de vérifier si deux points sont électriquement reliés.
+</p>
+</div><div class="measure">
+<h3>V Tension</h3>
+<p>
+La tension se mesure entre deux points du circuit.
+</p>
+</div><div class="measure">
+<h3>→ Diode</h3>
+<p>
+Le mode diode permet notamment d'observer une chute de tension
+directe et d'aider à vérifier une diode.
+</p>
+</div><div class="measure">
+<h3>µF Capacité</h3>
+<p>
+Certains multimètres peuvent mesurer la capacité d'un condensateur.
+</p>
+</div><div class="measure">
+<h3>A Courant</h3>
+<p>
+La mesure du courant nécessite de sélectionner correctement
+la fonction, la borne et la limite du multimètre.
+</p>
+</div></div><div class="safe"><h3>📋 Avant une mesure</h3><ol>
+<li>Identifier ce que l'on veut mesurer.</li>
+<li>Choisir la fonction correcte.</li>
+<li>Vérifier les cordons.</li>
+<li>Vérifier les limites de l'appareil.</li>
+<li>Pour la résistance, travailler hors tension.</li>
+</ol></div></section><section id="circuits"><h2>🔌 Comprendre les circuits électriques</h2><div class="lesson"><h3>➕ Circuit série</h3><p>
+Dans un circuit série, les composants sont placés les uns
+à la suite des autres.
+</p><div class="formula">
+Rtotal = R1 + R2 + R3
+</div></div><div class="lesson"><h3>🔀 Circuit parallèle</h3><p>
+Dans un circuit parallèle, plusieurs branches sont reliées
+aux mêmes deux points.
+</p><div class="formula">
+1/Rtotal = 1/R1 + 1/R2 + ...
+</div></div><div class="lesson"><h3>⚡ Lois de Kirchhoff</h3><p>
+Les lois de Kirchhoff permettent d'étudier les courants
+et les tensions dans les circuits.
+</p><div class="formula">
+Σ I = 0
+</div><div class="formula">
+Σ U = 0
+</div></div><div class="lesson"><h3>📈 Analogique et numérique</h3><p>
+Un signal analogique varie de manière continue.
+Un signal numérique utilise des niveaux discrets,
+souvent représentés par 0 et 1.
+</p></div></section><section id="exercices"><h2>📝 Banque de 45 exercices</h2><p>
+Résous chaque exercice avant d'afficher la correction.
+</p><h2 class="level beginner">
+🟢 NIVEAU FAIBLE — DÉBUTANT
+</h2><div id="exercices-faciles"></div><h2 class="level intermediate">
+🟠 NIVEAU MOYEN — INTERMÉDIAIRE
+</h2><div id="exercices-moyens"></div><h2 class="level advanced">
+🔴 NIVEAU EXTRÊME — AVANCÉ
+</h2><div id="exercices-extremes"></div></section><section id="apropos"><h2>⭐ À propos d'ÉLECTROSTART</h2><div class="info"><p>
+<b>ÉLECTROSTART</b> est une plateforme éducative consacrée
+à l'apprentissage de l'électronique.
+</p><br><p>
+Son objectif est de permettre aux apprenants de progresser
+depuis les bases jusqu'aux notions avancées.
+</p><br><ul>
+<li>📚 Cours d'électronique</li>
+<li>🔧 Composants électroniques</li>
+<li>📜 Histoire de l'électronique</li>
+<li>📏 Mesures au multimètre</li>
+<li>🔥 Soudure et sécurité</li>
+<li>📝 Exercices progressifs</li>
+<li>🧠 Circuits et formules</li>
+</ul></div></section></main><footer><div class="footer-logo">
+⚡ ÉLECTROSTART
+</div><p>
+Académie d'électronique
+</p><br><p>
+Créé par
+<strong>Christian Saleh</strong>
+</p><br><p>
+© 2026 ÉLECTROSTART — Tous droits réservés.
+</p></footer><button class="top"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
+</button>
+
+<script>
+
+function go(id){
+    document.getElementById(id).scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
+
+const faciles = [
+
+["1","Une résistance de 10 Ω est parcourue par 2 A. Trouve U.","U = R × I = 10 × 2 = 20 V."],
+
+["2","Une résistance de 6 Ω reçoit 12 V. Trouve I.","I = U / R = 12 / 6 = 2 A."],
+
+["3","Un appareil reçoit 10 V et 3 A. Trouve P.","P = U × I = 30 W."],
+
+["4","Convertis 2 A en mA.","2 A = 2000 mA."],
+
+["5","Convertis 5000 mA en A.","5000 mA = 5 A."],
+
+["6","Une résistance de 100 Ω reçoit 0,5 A. Trouve U.","U = 100 × 0,5 = 50 V."],
+
+["7","Quelle est l'unité de la résistance ?","L'ohm (Ω)."],
+
+["8","Quelle est l'unité de la tension ?","Le volt (V)."],
+
+["9","Quelle est l'unité du courant ?","L'ampère (A)."],
+
+["10","Quelle est l'unité de la puissance ?","Le watt (W)."],
+
+["11","Deux résistances de 5 Ω et 10 Ω sont en série. Trouve Rtotal.","Rtotal = 5 + 10 = 15 Ω."],
+
+["12","Une résistance de 20 Ω reçoit 10 V. Trouve I.","I = 10 / 20 = 0,5 A."],
+
+["13","Un appareil de 100 W fonctionne pendant 2 h. Trouve E.","E = 100 × 2 = 200 Wh."],
+
+["14","Une résistance de 4 Ω est traversée par 3 A. Trouve U.","U = 4 × 3 = 12 V."],
+
+["15","Une résistance de 4 Ω est traversée par 3 A. Trouve P.","P = R × I² = 4 × 9 = 36 W."]
+
+];
+
+
+const moyens = [
+
+["16","Deux résistances de 10 Ω et 20 Ω sont en série sous 12 V. Trouve le courant.","Rtotal = 30 Ω. I = 12 / 30 = 0,4 A."],
+
+["17","Deux résistances de 10 Ω sont en parallèle. Trouve Req.","Req = 5 Ω."],
+
+["18","Une batterie de 12 V alimente un appareil de 60 W. Trouve I.","I = P/U = 5 A."],
+
+["19","Une résistance de 50 Ω est parcourue par 2 A. Trouve P.","P = R × I² = 200 W."],
+
+["20","Trois résistances 5 Ω, 10 Ω et 15 Ω sont en série. Trouve Rtotal.","Rtotal = 30 Ω."],
+
+["21","Un appareil de 500 W fonctionne pendant 4 h. Trouve E.","E = 2000 Wh = 2 kWh."],
+
+["22","Une source de 24 V alimente une résistance de 8 Ω. Trouve I et P.","I = 3 A. P = 72 W."],
+
+["23","Un condensateur de 100 µF est sous 12 V. Trouve Q.","Q = C × U = 0,0012 C."],
+
+["24","Deux résistances de 6 Ω et 12 Ω sont en parallèle sous 24 V. Trouve Req.","Req = 4 Ω."],
+
+["25","Pour le circuit précédent, trouve le courant total.","I = 24 / 4 = 6 A."],
+
+["26","R1 = 2 kΩ et R2 = 3 kΩ sont en série sous 20 V. Trouve I.","Rtotal = 5 kΩ. I = 4 mA."],
+
+["27","Dans l'exercice précédent, trouve la tension sur R2.","U2 = 12 V."],
+
+["28","Un circuit possède R = 10 kΩ et C = 100 µF. Trouve τ.","τ = RC = 1 seconde."],
+
+["29","Un amplificateur inverseur a Rf = 100 kΩ et Rin = 10 kΩ. Trouve Av.","Av = -Rf/Rin = -10."],
+
+["30","Un amplificateur non-inverseur a Rf = 90 kΩ et R1 = 10 kΩ. Trouve Av.","Av = 1 + 90/10 = 10."]
+
+];
+
+
+const extremes = [
+
+["31","Une source de 48 V alimente 10 Ω, 20 Ω et 30 Ω en série. Trouve I et les trois tensions.","Rtotal = 60 Ω. I = 0,8 A. U1 = 8 V, U2 = 16 V, U3 = 24 V."],
+
+["32","8 Ω est en série avec un parallèle de 12 Ω et 6 Ω sous 24 V. Trouve Rtotal et I.","Rp = 4 Ω. Rtotal = 12 Ω. I = 2 A."],
+
+["33","Un transistor a β = 100 et Ib = 20 µA. Trouve Ic.","Ic = β × Ib = 2 mA."],
+
+["34","Un circuit LC a L = 10 mH et C = 100 µF. Donne la formule de la fréquence de résonance.","f = 1/(2π√LC)."],
+
+["35","Un circuit possède 30 V, R1 = 5 Ω et R2 = 10 Ω en série. Trouve I.","Rtotal = 15 Ω. I = 2 A."],
+
+["36","Pour l'exercice précédent, trouve U1 et U2.","U1 = 10 V. U2 = 20 V."],
+
+["37","Pour le même circuit, trouve la puissance totale.","P = U × I = 60 W."],
+
+["38","Un amplificateur inverseur possède Rin = 5 kΩ et Rf = 50 kΩ. Trouve Av.","Av = -50/5 = -10."],
+
+["39","Un amplificateur non-inverseur possède Rf = 99 kΩ et R1 = 11 kΩ. Trouve Av.","Av = 1 + 99/11 = 10."],
+
+["40","Un condensateur de 220 µF est chargé sous 10 V. Trouve Q.","Q = 0,0022 C."],
+
+["41","Un appareil de 120 W fonctionne pendant 8 h. Trouve son énergie.","E = 960 Wh = 0,96 kWh."],
+
+["42","Deux résistances de 20 Ω et 30 Ω sont en parallèle sous 12 V. Trouve Req.","Req = 12 Ω."],
+
+["43","Pour l'exercice précédent, trouve le courant total.","I = 1 A."],
+
+["44","Un circuit RC possède R = 4,7 kΩ et C = 100 µF. Trouve τ.","τ = 0,47 seconde."],
+
+["45","Pourquoi utilise-t-on souvent une résistance avec une LED dans un circuit simple ?","Elle limite le courant et aide à protéger la LED."]
+
+];
+
+
+function afficherExercices(tableau, id){
+
+    const zone = document.getElementById(id);
+
+    tableau.forEach(ex => {
+
+        const bloc = document.createElement("div");
+
+        bloc.className = "exercise";
+
+        bloc.innerHTML = `
+
+            <h3>Exercice ${ex[0]}</h3>
+
+            <p>${ex[1]}</p>
+
+            <button class="solution"
+            onclick="afficherReponse(this)">
+            Afficher la correction
+            </button>
+
+            <div class="answer">
+            ${ex[2]}
+            </div>
+
+        `;
+
+        zone.appendChild(bloc);
+
+    });
+
+}
+
+
+function afficherReponse(bouton){
+
+    const reponse = bouton.nextElementSibling;
+
+    reponse.classList.toggle("show");
+
+    if(reponse.classList.contains("show")){
+        bouton.textContent = "Masquer la correction";
+    }else{
+        bouton.textContent = "Afficher la correction";
+    }
+
+}
+
+
+afficherExercices(faciles,"exercices-faciles");
+
+afficherExercices(moyens,"exercices-moyens");
+
+afficherExercices(extremes,"exercices-extremes");
+
+</script></body>
+</html>
